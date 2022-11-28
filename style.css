@@ -1,0 +1,170 @@
+*{ 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0%;
+}
+
+html{
+    height: 100%;
+}
+
+body{
+    background-image: url(Energia.jpg);
+    font-family: cursive;
+    font-size: 1.2rem;
+    min-height: 100%;
+}
+
+.grid-container > *{
+    box-shadow: -1px 1px 7px 0px rgba(0,0,0,0.75);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center; 
+}
+
+.grid-container{
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+    "header"
+    "navbar"
+    "main"
+    "sidebar"
+    "footer";
+}
+
+.header {
+    
+    color: yellow;
+    text-shadow:  3px 3px darkgoldenrod;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 40px;
+    grid-area: header;
+    background-color: rgb(205, 210, 221);
+    display: grid;
+    grid-template-columns:  8fr 1fr ;
+}
+.pa{
+   color : rgb(8, 8, 8);
+}
+
+.navbar {
+    background-image: url("copia.png");
+    box-shadow: -1px 1px  7px 0px ;
+    grid-area: navbar;
+    background-size: 50px;
+    background-color: rgba(205, 210, 221, 0.13);
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    padding: 10px;
+    
+}
+
+.sidebar {
+    background-image: url("Panel.jpg");
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    grid-area: sidebar;
+    background: color ;
+
+}
+
+.main { 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: darkblue;
+    grid-area: main;
+   background-color: rgba(62, 167, 74, 0.363);
+
+}
+
+.p{
+    color: black;
+}
+
+.tr2{  
+    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(0, 0, 0);
+}
+
+.tr3{
+    
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: darkblue;
+}
+
+.tr4{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+    color: rgb(243, 241, 235);
+}
+
+.nv{ 
+    box-shadow: -1px 1px  7px 0px ;
+    background-color:rgba(205, 210, 221, 0.233); ;     
+    }
+
+.footer {
+    background-image: url("copia.png");
+    grid-area: footer;
+    background-color: rgba(205, 210, 221, 0.219);
+}
+
+nav a:hover{
+    
+    box-shadow: -1px 1px  7px 0px ;
+    color: rgba(36, 224, 11, 0.966);
+}
+
+nav a{ 
+    box-shadow: -1px 1px  7px 0px ;
+    font-weight: 600;
+    padding-right: 10px;
+     }
+
+img{ width: 150px;
+    font-weight: 600;
+    padding-right: 10px;
+     }
+
+     .icnav{
+         width: 100px;
+
+     }
+
+     .js{
+        height: 90px;
+        
+     }
+
+@media (min-width:600px){
+    .grid-container{
+        grid-gap: 20px;
+        grid-template: 
+        "header  header" 100px
+        "navbar  navbar" auto 
+        "sidebar main"  auto
+        "footer  footer" 70px/
+        200px    auto;
+        overflow-y: scroll;      
+    }
+}
+
+@media (min-width:900px){
+    .grid-container{
+        grid-template: 
+        "header  header  header" 100px
+        "navbar  main    sidebar"auto
+        "footer  footer  footer" 100px/
+        150px   auto 200px;
+        overflow-y: scroll;
+    }
+    .navbar {
+        grid-area: navbar;
+        grid-template: 
+        "uno"  100px
+        "dos"  100px
+        "tres"  100px
+        "cuatro"  100px;
+        grid-row-gap: 20px;
+    }
+}
